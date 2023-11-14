@@ -1,0 +1,160 @@
+{
+  "libros": [
+    {
+      "id": 1,
+      "titulo": "Harry Potter y la piedra filosofal",
+      "descripcion": "Un joven mago descubre su identidad en el mundo mágico.",
+      "autor": "J.K. Rowling",
+      "personajes": [1,2,3],
+      "url": "https://cdn.kobo.com/book-images/6750d058-29cb-4626-9c12-a62e816a80cc/166/300/False/harry-potter-and-the-philosopher-s-stone-3.jpg"
+    },
+    {
+      "id": 2,
+      "titulo": "Matar a un ruiseñor",
+      "descripcion": "Exploración de la injusticia racial en el sur de Estados Unidos.",
+      "autor": "Harper Lee",
+      "personajes": [4,5,6],
+      "url": "https://m.media-amazon.com/images/I/81+j6JIEweL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 3,
+      "titulo": "El gran Gatsby",
+      "descripcion": "Exploración de la decadencia de la sociedad estadounidense en la década de 1920.",
+      "autor": "F. Scott Fitzgerald",
+      "personajes": [7,8,9],
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Portada_de_la_novel%C2%B7la_%22The_Great_Gatsby%22.gif"
+    },
+    {
+      "id": 4,
+      "titulo": "Cien años de soledad",
+      "descripcion": "La historia mágica y trágica de la familia Buendía en Macondo.",
+      "autor": "Gabriel García Márquez",
+      "personajes": [10, 11, 12, 13],
+      "url": "https://m.media-amazon.com/images/I/91TvVQS7loL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 5,
+      "titulo": "Crimen y castigo",
+      "descripcion": "El estudiante Raskólnikov comete un asesinato y enfrenta las consecuencias.",
+      "autor": "Fyodor Dostoevsky",
+      "personajes": [14, 15, 16, 17],
+      "url": "https://m.media-amazon.com/images/I/41dHO9-vxeL.jpg"
+    },
+    {
+      "id": 6,
+      "titulo": "Orgullo y prejuicio",
+      "descripcion": "El complicado romance entre Elizabeth Bennet y Mr. Darcy en la sociedad británica del siglo XIX.",
+      "autor": "Jane Austen",
+      "personajes": [18, 19, 20, 21],
+      "url": "https://www.albaeditorial.es/wp-content/uploads/2020/10/9788484288060-orgullo-y-prejuicio-alba-editorial.jpg"
+    }
+  ],
+  "personajes": [
+    {
+      "id": 1,
+      "nombre": "Harry Potter",
+      "descripcion": "El niño que sobrevivió y protagonista principal."
+    },
+    {
+      "id": 2,
+      "nombre": "Hermione Granger",
+      "descripcion": "Estudiante ejemplar con conocimientos excepcionales.",
+    },
+    {
+      "id": 3,
+      "nombre": "Ron Weasley",
+      "descripcion": "Leal amigo de Harry con una familia numerosa."
+    },
+    {
+      "id": 4,
+      "nombre": "Atticus Finch",
+      "descripcion": "Abogado valiente y padre de Scout y Jem."
+    },
+    {
+      "id": 5,
+      "nombre": "Scout Finch",
+      "descripcion": "Narradora joven y observadora de la historia."
+    },
+    {
+      "id": 6,
+      "nombre": "Jem Finch",
+      "descripcion": "Hermano mayor de Scout, afectado por la injusticia racial."
+    },
+    {
+      "id": 7,
+      "nombre": "Jay Gatsby",
+      "descripcion": "Misterioso anfitrión de fiestas lujosas."
+    },
+    {
+      "id": 8,
+      "nombre": "Daisy Buchanan",
+      "descripcion": "Mujer elegante y figura central de la trama amorosa."
+    },
+    {
+      "id": 9,
+      "nombre": "Nick Carraway",
+      "descripcion": "Narrador y observador de los eventos en la historia."
+    },
+    {
+      "id": 10,
+      "nombre": "José Arcadio Buendía",
+      "descripcion": "Patriarca fundador de la familia Buendía en Macondo."
+    },
+    {
+      "id": 11,
+      "nombre": "Úrsula Iguarán",
+      "descripcion": "Esposa de José Arcadio Buendía y matriarca de la familia Buendía."
+    },
+    {
+      "id": 12,
+      "nombre": "Aureliano Buendía",
+      "descripcion": "Hijo de José Arcadio Buendía y Úrsula, líder militar y solitario."
+    },
+    {
+      "id": 13,
+      "nombre": "Rebeca Buendía",
+      "descripcion": "Hija adoptiva de la familia Buendía con un pasado misterioso."
+    },
+    {
+      "id": 14,
+      "nombre": "Rodion Raskólnikov",
+      "descripcion": "Estudiante atormentado que comete un crimen por una supuesta superioridad."
+    },
+    {
+      "id": 15,
+      "nombre": "Sofía Semiónovna Marmeládov",
+      "descripcion": "Mujer que sufre las consecuencias de las acciones de Raskólnikov.",
+      "url": "https://ejemplo.com/sofia-marmeladov"
+    },
+    {
+      "id": 16,
+      "nombre": "Porfirio Petrovich",
+      "descripcion": "Investigador que intenta resolver el crimen de Raskólnikov."
+    },
+    {
+      "id": 17,
+      "nombre": "Avdotya Románovna Raskólnikova (Dunya)",
+      "descripcion": "Hermana de Raskólnikov que busca una vida mejor."
+    },
+    {
+      "id": 18,
+      "nombre": "Elizabeth Bennet",
+      "descripcion": "Protagonista de 'Orgullo y prejuicio', inteligente y de mente abierta."
+    },
+    {
+      "id": 19,
+      "nombre": "Mr. Fitzwilliam Darcy",
+      "descripcion": "Héroe romántico y objeto del interés de Elizabeth Bennet."
+    },
+    {
+      "id": 20,
+      "nombre": "Jane Bennet",
+      "descripcion": "Hermana mayor de Elizabeth, dulce y amable."
+    },
+    {
+      "id": 21,
+      "nombre": "Charles Bingley",
+      "descripcion": "Amigo de Darcy y pretendiente de Jane Bennet."
+    }
+  ]
+}
