@@ -26,7 +26,7 @@
           "nombre": { "type": "string" },
           "descripcion": { "type": "string" }
         },
-        "required": ["id", "nombre", "descripcion", "url"]
+        "required": ["id", "nombre", "descripcion"]
       }
     }
   },

@@ -19,13 +19,13 @@ public class Validar {
                     .build();
 
             JsonSchema schema = factory.getSchema(Libro.class.getResourceAsStream("/schema.json"));
-            JsonNode json = mapper.readTree(Libro.class.getResourceAsStream("/Libros.json"));
+            JsonNode json = mapper.readTree(Libro.class.getResourceAsStream("/LibrosMal.json"));
 
             Set<ValidationMessage> errores = schema.validate(json);
 
             verificatonDisplay(errores);
         }catch (Exception e){
-
+e.printStackTrace();
         }
     }
 
