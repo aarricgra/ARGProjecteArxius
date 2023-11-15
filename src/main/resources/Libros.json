@@ -58,7 +58,7 @@
     {
       "id": 2,
       "nombre": "Hermione Granger",
-      "descripcion": "Estudiante ejemplar con conocimientos excepcionales.",
+      "descripcion": "Estudiante ejemplar con conocimientos excepcionales."
     },
     {
       "id": 3,
@@ -123,8 +123,7 @@
     {
       "id": 15,
       "nombre": "Sofía Semiónovna Marmeládov",
-      "descripcion": "Mujer que sufre las consecuencias de las acciones de Raskólnikov.",
-      "url": "https://ejemplo.com/sofia-marmeladov"
+      "descripcion": "Mujer que sufre las consecuencias de las acciones de Raskólnikov."
     },
     {
       "id": 16,
