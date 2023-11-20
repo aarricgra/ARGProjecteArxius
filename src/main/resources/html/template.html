@@ -11,6 +11,7 @@
         .cover{ height: 400px }
         .libro{margin-bottom: 60px}
         .centered_text{width: 100%; text-align: center}
+        .unbold{font-weight: normal}
         table{border: 1px solid black;width: 100%}
         td{padding: 20px}
     </style>
@@ -18,16 +19,13 @@
 <body>
 <h1>Detalles de los libros</h1>
 
-<!-- Verificar que la variable libros no sea nula antes de intentar acceder -->
 <th:block th:if="${libros != null}">
-    <!-- Iterar sobre la lista de libros -->
     <div class="libro" th:each="libro : ${libros}">
         <div class="container">
             <div class="half">
-                <p th:text="'Titulo: <bold>' + ${libro.titulo}+'</bold>'"></p>
-                <p th:text="'Autor: ' + ${libro.autor}"></p>
-                <p th:text="'Descripcion: ' + ${libro.descripcion}"></p>
-                <p class="centered_text">Personajes</p>
+                <p><b>Titulo: <a class="unbold" th:text="${libro.titulo}"></a></b></p>
+                <p><b>Autor: <a class="unbold" th:text="${libro.autor}"></a></b></p>
+                <p><b>Descripcion: <a class="unbold" th:text="${libro.descripcion}"></a></b></p>
                 <th:block th:if="${personajes != null}">
                     <table>
                         <thead>
@@ -52,7 +50,10 @@
                 </th:block>
             </div>
             <div class="half_align">
-                <img class="cover" th:src="${libro.url}" alt="Imagen Libro">
+                <center>
+                    <img class="cover" th:src="${libro.url}" alt="Imagen Libro">
+                </center>
+
             </div>
         </div>
     </div>
