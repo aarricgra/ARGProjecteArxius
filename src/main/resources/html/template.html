@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles de los Libros</title>
+    <link rel="stylesheet" type="text/css" href="../css/ciutat.css">
+    <style>
+        .container { width: 100%; display: flex; }
+        .half { width: 50%; }
+        .half_align { width: 50%;align-items: center}
+        .cover{ height: 400px }
+        .libro{margin-bottom: 60px}
+        .centered_text{width: 100%; text-align: center}
+        table{border: 1px solid black;width: 100%}
+        td{padding: 20px}
+    </style>
+</head>
+<body>
+<h1>Detalles de los libros</h1>
+
+<!-- Verificar que la variable libros no sea nula antes de intentar acceder -->
+<th:block th:if="${libros != null}">
+    <!-- Iterar sobre la lista de libros -->
+    <div class="libro" th:each="libro : ${libros}">
+        <div class="container">
+            <div class="half">
+                <p th:text="'Titulo: <bold>' + ${libro.titulo}+'</bold>'"></p>
+                <p th:text="'Autor: ' + ${libro.autor}"></p>
+                <p th:text="'Descripcion: ' + ${libro.descripcion}"></p>
+                <p class="centered_text">Personajes</p>
+                <th:block th:if="${personajes != null}">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Descripcion</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <th:block th:each="id : ${libro.personajes}">
+                            <th:block th:each="personaje : ${personajes}">
+                                <th:block th:if="${personaje.id == id}">
+                                    <tr>
+                                        <td th:text="${personaje.nombre}"></td>
+                                        <td th:text="${personaje.descripcion}"></td>
+                                    </tr>
+                                </th:block>
+                            </th:block>
+                        </th:block>
+                        </tbody>
+                    </table>
+                </th:block>
+            </div>
+            <div class="half_align">
+                <img class="cover" th:src="${libro.url}" alt="Imagen Libro">
+            </div>
+        </div>
+    </div>
+</th:block>
+</body>
+</html>
