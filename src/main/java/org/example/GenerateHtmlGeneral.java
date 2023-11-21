@@ -9,7 +9,7 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 import java.io.*;
 import java.util.ArrayList;
 
-public class GenerateHtml {
+public class GenerateHtmlGeneral {
     public static void main(String[] args) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
@@ -47,7 +47,7 @@ public class GenerateHtml {
             context.setVariable("personajes", personajes);
 
             // Processament de la plantilla
-            String contingutHTML = templateEngine.process("template", context);
+            String contingutHTML = templateEngine.process("templateGeneral", context);
 
             // Imprimir el contingut generat
             System.out.println(contingutHTML);

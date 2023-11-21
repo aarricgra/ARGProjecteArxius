@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles de los Libros</title>
+    <link rel="stylesheet" type="text/css" href="../css/ciutat.css">
+    <style>
+        .container { width: 100%; display: flex; }
+        .half { width: 50%; }
+        .half_align { width: 50%;align-items: center}
+        .cover{ height: 400px }
+        .libro{margin-bottom: 60px}
+        .centered_text{width: 100%; text-align: center}
+        .unbold{font-weight: normal}
+    </style>
+</head>
+<body>
+<h1>Detalles de los libros</h1>
+
+<th:block th:if="${libros != null}">
+    <div class="libro" th:each="libro : ${libros}">
+        <div class="container">
+            <div class="half">
+                <p><b>Titulo: <a class="unbold" th:text="${libro.titulo}" th:href="'libros/libro_'+${libro.id}+'.html'"></a></b></p>
+            </div>
+            <div class="half_align">
+                <center>
+                    <img class="cover" th:src="${libro.url}" alt="Imagen Libro">
+                </center>
+
+            </div>
+        </div>
+    </div>
+</th:block>
+</body>
+</html>

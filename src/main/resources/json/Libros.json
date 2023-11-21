@@ -47,7 +47,16 @@
       "autor": "Jane Austen",
       "personajes": [18, 19, 20, 21],
       "url": "https://www.albaeditorial.es/wp-content/uploads/2020/10/9788484288060-orgullo-y-prejuicio-alba-editorial.jpg"
+    },
+    {
+      "id": 7,
+      "titulo": "1984",
+      "descripcion": "Distopía que explora el control totalitario y la manipulación de la verdad.",
+      "autor": "George Orwell",
+      "personajes": [22, 23, 24, 25],
+      "url": "https://m.media-amazon.com/images/I/61kjuGfZyML.jpg"
     }
+
   ],
   "personajes": [
     {
@@ -154,6 +163,26 @@
       "id": 21,
       "nombre": "Charles Bingley",
       "descripcion": "Amigo de Darcy y pretendiente de Jane Bennet."
+    },
+    {
+      "id": 22,
+      "nombre": "Winston Smith",
+      "descripcion": "Protagonista que cuestiona el régimen totalitario."
+    },
+    {
+      "id": 23,
+      "nombre": "Julia",
+      "descripcion": "Amante de Winston y rebelde contra el sistema."
+    },
+    {
+      "id": 24,
+      "nombre": "O'Brien",
+      "descripcion": "Miembro del partido interior con un papel ambiguo."
+    },
+    {
+      "id": 25,
+      "nombre": "Big Brother",
+      "descripcion": "Figura omnipresente y líder del régimen."
     }
   ]
 }
