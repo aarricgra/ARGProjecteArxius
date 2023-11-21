@@ -6,12 +6,12 @@
     <link rel="stylesheet" type="text/css" href="../css/ciutat.css">
     <style>
         .container { width: 100%; display: flex; }
-        .half { width: 50%; }
-        .half_align { width: 50%;align-items: center}
+        .half{ width: 50%;align-items: center;display: flex}
         .cover{ height: 400px }
         .libro{margin-bottom: 60px}
         .centered_text{width: 100%; text-align: center}
         .unbold{font-weight: normal}
+        .titulo{width: 100%;text-align: center}
     </style>
 </head>
 <body>
@@ -21,9 +21,9 @@
     <div class="libro" th:each="libro : ${libros}">
         <div class="container">
             <div class="half">
-                <p><b>Titulo: <a class="unbold" th:text="${libro.titulo}" th:href="'libros/libro_'+${libro.id}+'.html'"></a></b></p>
+                <p class="titulo"><b>Titulo: <a class="unbold" th:text="${libro.titulo}" th:href="'libros/libro_'+${libro.id}+'.html'"></a></b></p>
             </div>
-            <div class="half_align">
+            <div class="half">
                 <center>
                     <img class="cover" th:src="${libro.url}" alt="Imagen Libro">
                 </center>
