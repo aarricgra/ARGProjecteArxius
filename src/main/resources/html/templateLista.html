@@ -36,7 +36,9 @@
             <tbody>
             <tr th:each="libro : ${libros}">
                 <td>
-                    <p class="titulo"><a class="bold" th:text="${libro.titulo}" th:href="'libros/libro_'+${libro.id}+'.html'"></a></p>
+                    <p class="titulo">
+                        <a class="bold" th:text="${libro.titulo}" th:href="'libros/libro_'+${libro.id}+'.html'"></a>
+                    </p>
                 </td>
                 <td>
                     <center>
