@@ -5,26 +5,41 @@
     <title>Detalles de los Libros</title>
     <link rel="stylesheet" type="text/css" href="../css/ciutat.css">
     <style>
+        *{
+            padding: 0;
+            margin: 0;
+            color: #45672f;
+            text-decoration: none;
+            font-size: 24px;
+        }
         .container { width: 100%; display: flex; }
-        .half { width: 50%; }
+        .half { width: 50%; padding: 15px}
         .half_align { width: 50%;align-items: center}
         .cover{ height: 400px }
         .libro{margin-bottom: 60px}
-        .centered_text{width: 100%; text-align: center}
         .unbold{font-weight: normal}
-        table{border: 1px solid black;width: 100%}
-        td{padding: 20px}
+        table{
+            width: 100%;
+            border: solid 5px #45672f;
+            border-spacing: 0 15px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {border: 5px solid #45672f;}
+        body{background-color: #b9f8a3;}
+        .cabecera{width: 100%; text-align: center;padding-bottom: 20px;padding-top: 20px}
+
+
     </style>
 </head>
 <body>
-<h1>Detalles de El gran Gatsby</h1>
-
+<h1 class="cabecera">Detalles de El gran Gatsby</h1>
     <div class="libro">
         <div class="container">
             <div class="half">
-                <p><b>Titulo: <a class="unbold">El gran Gatsby</a></b></p>
+                <p><b>Título: <a class="unbold">El gran Gatsby</a></b></p>
                 <p><b>Autor: <a class="unbold">F. Scott Fitzgerald</a></b></p>
-                <p><b>Descripcion: <a class="unbold">Exploración de la decadencia de la sociedad estadounidense en la década de 1920.</a></b></p>
+                <p><b>Descripción: <a class="unbold">Exploración de la decadencia de la sociedad estadounidense en la década de 1920.</a></b></p>
                 
                     <table>
                         <thead>
