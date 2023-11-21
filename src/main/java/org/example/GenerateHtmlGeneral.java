@@ -51,7 +51,7 @@ public class GenerateHtmlGeneral {
 
             // Imprimir el contingut generat
             System.out.println(contingutHTML);
-            escriuHTML(contingutHTML,"src/main/resources/outputs/index.html");
+            escriuHTML(contingutHTML,"src/main/resources/outputs/indexGeneral.html");
 
             System.out.println(personajes.toString());
         } catch (Exception e) {
