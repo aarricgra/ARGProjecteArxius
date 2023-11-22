@@ -2,18 +2,28 @@ package org.example;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.commons.configuration2.INIConfiguration;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
 
 public class GenerateHtmls {
     public static void main(String[] args) {
         try {
+            INIConfiguration ini = new INIConfiguration();
+            FileReader reader = new FileReader("src/main/resources/config.ini");
+            ini.read(reader);
+
+            String nombrePag=ini.getSection("info").getProperty("NomLlocWeb").toString();
+            String descPag=ini.getSection("info").getProperty("TematicaLlocWeb").toString();
+
+            System.out.println(nombrePag+"//"+descPag);
             ObjectMapper objectMapper = new ObjectMapper();
             File file = new File("src/main/resources/json/Libros.json");
             JsonNode rootNode = objectMapper.readTree(file);
@@ -32,15 +42,15 @@ public class GenerateHtmls {
                 personajes.add(personaje);
             }
 
-            generateList(libros);
-            generateInfo(libros,personajes);
+            generateList(libros,nombrePag,descPag);
+            generateInfo(libros,personajes,nombrePag,descPag);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    static void generateList(ArrayList<Libro> libros){
+    static void generateList(ArrayList<Libro> libros,String nomPag,String descPag){
         // Configuración del Resolver de les plantillas
         ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
         templateResolver.setPrefix("html/");
@@ -53,8 +63,10 @@ public class GenerateHtmls {
         // Creación del context con los datos
         Context context = new Context();
 
-        //utilizamos las listas de Libros y Personaje
+        //utilizamos las listas de Libros y las variables del ini
         context.setVariable("libros", libros);
+        context.setVariable("nomPag",nomPag);
+        context.setVariable("descPag",descPag);
 
         // Processament de la plantilla
         String contingutHTML = templateEngine.process("templateLista", context);
@@ -64,7 +76,7 @@ public class GenerateHtmls {
         escriuHTML(contingutHTML,"src/main/resources/outputs/index.html");
     }
 
-    static void generateInfo(ArrayList<Libro> libros,ArrayList<Personaje> personajes){
+    static void generateInfo(ArrayList<Libro> libros,ArrayList<Personaje> personajes,String nomPag,String descPag){
         for (Libro libro:libros) {
             // Configuración del Resolver de les plantillas
             ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
@@ -78,9 +90,11 @@ public class GenerateHtmls {
             // Creación del context con los datos
             Context context = new Context();
 
-            //utilizamos las listas de Libros y Personaje
+            //utilizamos las listas de Libros y Personaje y las variables
             context.setVariable("libro", libro);
             context.setVariable("personajes", personajes);
+            context.setVariable("nomPag",nomPag);
+            context.setVariable("descPag",descPag);
 
             // Processament de la plantilla
             String contingutHTML = templateEngine.process("templateInfo", context);

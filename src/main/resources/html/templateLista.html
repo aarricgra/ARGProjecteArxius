@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Detalles de los Libros</title>
+    <title th:text="${nomPag}">Detalles de los Libros</title>
     <link rel="stylesheet" type="text/css" href="../css/ciutat.css">
     <style>
         *{
@@ -22,7 +22,7 @@
     </style>
 </head>
 <body>
-<h1 class="cabecera">Detalles de los libros</h1>
+<h1 class="cabecera" th:text="${descPag}">Detalles de los libros</h1>
 
 <th:block th:if="${libros != null}">
     <center>
