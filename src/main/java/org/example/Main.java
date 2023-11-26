@@ -198,7 +198,6 @@ public class Main {
             String contingutHTML = templateEngine.process("templateInfo", context);
 
             // Imprimir el contingut generat
-            System.out.println(contingutHTML);
             writeHTML(contingutHTML,"src/main/resources/outputs/libros/libro_"+libro.id+".html");
         }
     }
