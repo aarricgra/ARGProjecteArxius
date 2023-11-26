@@ -149,7 +149,7 @@ public class Main {
         }
 
     }
-    static void generateList(){
+    static void generateList() throws IOException {
         // Configuración del Resolver de les plantillas(la ruta y la extension del archio)
         ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
         templateResolver.setPrefix("htmlTemplates/");
@@ -167,14 +167,14 @@ public class Main {
         context.setVariable("nomPag", nombrePag);
         context.setVariable("descPag",descPag);
 
-        // Processament de la plantilla
+        // Procesado de la plantilla
         String contingutHTML = templateEngine.process("templateLista", context);
 
-        // Imprimir el contingut generat
-        System.out.println(contingutHTML);
-        writeHTML(contingutHTML,"src/main/resources/outputs/index.html");
+        // Crear html
+        BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/resources/outputs/index.html"));
+        writer.write(contingutHTML);
     }
-    static void generateInfo(){
+    static void generateInfo() throws IOException {
         for (Libro libro:libros) {
             // Configuración del Resolver de les plantillas
             ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
@@ -194,20 +194,12 @@ public class Main {
             context.setVariable("nomPag", nombrePag);
             context.setVariable("descPag",descPag);
 
-            // Processament de la plantilla
+            // Procesado de la plantilla
             String contingutHTML = templateEngine.process("templateInfo", context);
 
-            // Imprimir el contingut generat
-            writeHTML(contingutHTML,"src/main/resources/outputs/libros/libro_"+libro.id+".html");
-        }
-    }
-    static void writeHTML(String contingutHTML, String nomFitxer){
-        try  {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(nomFitxer));
-            // Escriure el contingut al fitxer
+            // Crear html
+            BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/resources/outputs/libros/libro_"+libro.id+".html"));
             writer.write(contingutHTML);
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 }
