@@ -1,0 +1,29 @@
+{
+  "libros": [
+    {
+      "id": 1,
+      "titulo": "Harry Potter y la piedra filosofal",
+      "descripcion": "Un joven mago descubre su identidad en el mundo mágico.",
+      "autor": "J.K. Rowling",
+      "personajes": [1,2,3],
+      "url": "urlejemplo.com"
+    }
+  ],
+  "personajes": [
+    {
+      "id": 1,
+      "nombre": "Harry Potter",
+      "descripcion": "El niño que sobrevivió y protagonista principal."
+    },
+    {
+      "id": 2,
+      "nombre": "Hermione Granger",
+      "descripcion": "Estudiante ejemplar con conocimientos excepcionales."
+    },
+    {
+      "id": 3,
+      "nombre": "Ron Weasley",
+      "descripcion": "Leal amigo de Harry con una familia numerosa."
+    }
+  ]
+}
